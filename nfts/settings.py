@@ -18,9 +18,3 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': None,
     'scrapy_rotated_proxy.downloadmiddlewares.proxy.RotatedProxyMiddleware': 750,
 }
-"""
-ROTATED_PROXY_ENABLED = False
-
-HTTP_PROXIES = [
-    'http://nothhing:80',
-]"""

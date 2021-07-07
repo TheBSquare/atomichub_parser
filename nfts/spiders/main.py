@@ -7,6 +7,8 @@ import json
 
 from database import Db
 
+from settings import blockchain_settings
+
 
 class MainSpider(scrapy.Spider):
     name = 'main'
@@ -53,7 +55,7 @@ class MainSpider(scrapy.Spider):
         "ref_block_prefix": ''
     }
 
-    private_key = "key"
+    private_key = blockchain_settings['active_private_key']
     chain_id = "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4"
 
     checked = set()
@@ -106,14 +108,12 @@ class MainSpider(scrapy.Spider):
                 price = self.db.get_price(row['asset_ids'][0], response.meta['token'])
 
                 if not price is None:
-                    print(time.time())
                     self.schema_buy['actions'][0]['data'] = self.get_action_data(row['sale_id'], response.meta['token'])
                     transaction = str(self.schema_buy).replace("'", '"')
                     os.system(f"cleos --url https://wax.greymass.com sign -p "
                               f"-k {self.private_key} "
                               f"-c {self.chain_id} "
                               f"'{transaction}'")
-                    print(time.time())
 
     def parse_ref_num(self, response, **kwargs):
         yield scrapy.Request(
