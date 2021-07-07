@@ -12,8 +12,3 @@ db_settings = {
 blockchain_settings = {
     "active_private_key": "5Hxtg..."
 }
-
-work_path = os.getcwd()
-
-show_browser = True     # True - показывать екран скупщика, False - не показывать
-
