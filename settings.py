@@ -10,7 +10,7 @@ db_settings = {
 }
 
 blockchain_settings = {
-    "active_private_key": "5HxtgwPugnnKDS8kHaxEJ6XutsEXgCFjBke7FX69XE8cP6zV4Su"
+    "active_private_key": "5Hxtg..."
 }
 
 work_path = os.getcwd()
