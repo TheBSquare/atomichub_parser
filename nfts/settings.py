@@ -22,9 +22,5 @@ DOWNLOADER_MIDDLEWARES = {
 ROTATED_PROXY_ENABLED = False
 
 HTTP_PROXIES = [
-    'http://NkKB4DpF:fSP1ApTz@91.199.112.79:53543',
-    'http://NkKB4DpF:fSP1ApTz@45.152.116.248:60257',
-    'http://NkKB4DpF:fSP1ApTz@109.196.172.62:55955',
-    'http://NkKB4DpF:fSP1ApTz@94.154.189.231:45349',
-    'http://NkKB4DpF:fSP1ApTz@45.95.28.100:6279',
+    'http://nothhing:80',
 ]"""
