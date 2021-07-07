@@ -53,7 +53,7 @@ class MainSpider(scrapy.Spider):
         "ref_block_prefix": ''
     }
 
-    private_key = "5HxtgwPugnnKDS8kHaxEJ6XutsEXgCFjBke7FX69XE8cP6zV4Su"
+    private_key = "key"
     chain_id = "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4"
 
     checked = set()
